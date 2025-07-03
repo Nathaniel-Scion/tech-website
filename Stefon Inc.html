@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+      StefonTech.com
+    </title>
+
+    <style>
+      html{
+        scroll-behavior: smooth;
+      }
+
+      body{
+        font-family: Arial;
+        height: 100%;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        background-image: url("https://png.pngtree.com/background/20250102/original/pngtree-computer-of-a-programmer-with-lines-code-of-software-picture-image_15533605.jpg");
+        background-color: rgb(68, 66, 66);
+        backdrop-filter: blur(4px);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+      }
+
+      .ST{
+        color: orangered;
+      }
+      
+      .sticky{
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .header{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 0;
+        padding-right: 0;
+        background-color: rgba(26, 25, 25, 0.929); 
+        backdrop-filter: blur(100px);
+        -webkit-backdrop-filter: blur(100px);
+        margin-bottom: 0;
+      }
+
+      .lower-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+        white-space: nowrap;
+        overflow-x: auto;
+        margin-top: 10px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+      }
+
+      @media (max-width: 768px) {
+        .lower-header {
+          visibility: visible;
+        }
+      }
+
+      .right-end{
+        display: flex;
+        flex-direction: row;
+        margin-top: -7px;
+        padding-top: 7px;
+        width: 220px;
+      }
+
+      .li{
+        margin-right: 15px;
+        color: white;
+        background-color: orange;
+        cursor: pointer;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        border-radius: 20px;
+      }
+
+      .li:hover{
+        background-color: orangered;
+      }
+
+      .ca{
+        color: white;
+        background-color: rgb(253, 93, 35);
+        cursor: pointer;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        border-radius: 20px;
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
+      .ca:hover{
+        color: white;
+        background-color: orangered;
+      }
+
+      .id-home{
+        color: white;
+        text-decoration: none;
+      }
+
+      .id-home:active{
+        color: grey;
+      }
+      
+      .about{
+        cursor: pointer;
+        color: white;
+        padding-top: 7px;
+        padding-left: 10px;
+        text-decoration: none;
+      }
+
+      .about:hover{
+        text-decoration: underline;
+      }
+
+      .about:target{
+        color: grey;
+      }
+
+      #button1:active ~ about:target{
+        color: black;
+      }
+      
+      .id-about{
+        color: white;
+        text-decoration: none;
+      }
+
+      .services{
+        color: white;
+        cursor: pointer;
+        padding-top: 7px;
+        padding-left: 10px;
+        text-decoration: none;
+      }
+
+      .services:hover{
+        text-decoration: underline;
+      }
+
+      .id-services{
+        color: white;
+        text-decoration: none;
+      }
+
+      .programmers{
+        color: white;
+        cursor: pointer;
+        padding-top: 7px;
+        padding-left: 10px;
+        text-decoration: none;
+      }
+
+      .programmers:hover{
+        text-decoration: underline;
+      }
+
+      .id-programmers{
+        color: white;
+        text-decoration: none;
+      }
+
+      .home{
+        color: white;
+        cursor: pointer;
+        padding-top: 7px;
+        padding-left: 10px;
+        text-decoration: none;
+      }
+
+      .home:hover{
+        text-decoration: underline;
+      }
+
+      .cu{
+        color: white;
+        cursor: pointer;
+        padding-top: 7px;
+        padding-left: 10px;
+        margin-right: 10px;
+        text-decoration: none;
+      }
+
+      .cu:hover{
+        text-decoration: underline;
+      }
+
+      .intro-space{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: 100%;
+      }
+
+      .intro{
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: 450px 1fr;
+        background-color: rgba(26, 25, 25, 0.529);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        border-radius: 30px;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding-top: 50px;
+        height: 300px;
+        padding-bottom: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+        column-gap: 9px;
+        max-width: 100%;
+      }
+
+      .intro-text{
+        padding-top: 50px;
+      }
+
+      .welcome{
+        font-size: 45px;
+        justify-self: center;
+      }
+
+      .welcome-backup{
+        font-size: xx-large;
+        justify-self: center;
+      }
+
+      .waving-images{
+        display: grid;
+        position: relative;
+        max-width: 450px; 
+      }
+
+      .waving-image-2-space{
+        width: 300px;
+      }
+
+      .waving-image-2{
+        border-radius: 250px;
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        left: 150px;
+        top: 100px;
+      }
+
+      .waving-image-1-space{
+        width: 300px;
+      }
+
+      .waving-image-1{
+        display: block;
+        border-radius: 250px;
+        width: 300px;
+        height: auto;
+      }
+
+      .about-big-body{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        color: white;
+      }
+
+      .about-stefon{
+        justify-self: center;
+      }
+
+      .about-question{
+        justify-self: center;
+        font-size: x-large;
+      }
+
+      .about-body{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: rgba(26, 25, 25, 0.529);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        padding: 25px;
+        border-radius: 30px;
+        column-gap: 35px;
+        row-gap: 30px;
+      }
+
+      .about-body-items{
+        border: 1px;
+      }
+
+      .wrw:hover{
+        background-color: rgba(88, 85, 85, 0.129);
+      }
+
+      .om:hover{
+        background-color: rgba(88, 85, 85, 0.129);
+      }
+
+      .wdwd:hover{
+        background-color: rgba(88, 85, 85, 0.129);
+      }
+
+      .wrw-question{
+        justify-self: center;
+      }
+
+      .wrw-answer{
+        text-align: center;
+      }
+
+      .wdwd-question{
+        justify-self: center;
+      }
+
+      .wdwd-answer{
+        text-align: center;
+      }
+
+      .om-question{
+        justify-self: center;
+      }
+
+      .om-answer{
+        text-align: center;
+      }
+
+      .wcs{
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .stefon-service{
+        color: white;
+        font-size: 35px;
+        font-weight: bolder;
+        text-align: center;
+        padding: 30px;
+        padding-top: 0;
+      }
+
+      .wcs-question{
+        color: orange;
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: bolder;
+        padding-top: 20px;
+        margin-bottom: 50px;
+      }
+
+      .wcs-answers{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        column-gap: 15px;
+        row-gap: 40px;
+      }
+      
+      .no-1{
+        vertical-align: top;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        max-width: 200px;
+        padding: 15px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .a-1{
+        text-align: center;
+        color: orange
+      }
+
+      .no-1:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .no-2{
+        vertical-align: top;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        max-width: 200px;
+        padding: 15px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .a-2{
+        text-align: center;
+        color: orange;
+      }
+
+      .no-2:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .no-3{
+        vertical-align: top;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        max-width: 200px;
+        padding: 15px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .a-3{
+        text-align: center;
+        color: orange;
+      }
+
+      .no-3:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .no-4{
+        vertical-align: top;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        max-width: 200px;
+        padding: 15px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .a-4{
+        text-align: center;
+        color: orange;
+      }
+
+      .no-4:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .no-5{
+        vertical-align: top;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        max-width: 200px;
+        padding: 15px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .a-5{
+        text-align: center;
+        color: orange;
+      }
+
+      .no-5:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .no-6{
+        vertical-align: top;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        max-width: 200px;
+        padding: 15px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .a-6{
+        text-align: center;
+        color: orange;
+      }
+
+      .no-6:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .no-7{
+        vertical-align: top;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        max-width: 200px;
+        padding: 15px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .a-7{
+        text-align: center;
+        color: orange;
+      }
+
+      .no-7:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .no-8{
+        vertical-align: top;
+        color: white;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        max-width: 200px;
+        
+        padding: 15px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .a-8{
+        text-align: center;
+        color: orange;
+      }
+
+      .no-8:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .no-9{
+        vertical-align: top;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        max-width: 200px;
+        padding: 15px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .a-9{
+        text-align: center;
+        color: orange;
+      }
+
+      .no-9:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .meet-our-programmers{
+        padding-bottom: 50px;
+        padding-top: 50px;
+      }
+
+      .mop-header{
+        color: white;
+        justify-self: center;
+        font-size: 20px;
+        font-weight: bolder;
+        margin-bottom: 35px;
+        color: orange;
+      }
+
+      .mop-body{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        row-gap: 40px;
+        column-gap: 20px;
+      }
+
+      .mop-1{
+        vertical-align: top;
+        max-width: 270px;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        justify-items: center;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .mop-1:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .programmer-1-space{
+        max-width: 250px;
+        margin-bottom: 10px;
+      }
+
+      .programmer-1{
+        width: 200px;
+      }
+
+      .ali{
+        text-align: center;
+        padding: 10px;
+      }
+
+      .mop-2{
+        vertical-align: top;
+        max-width: 270px;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        justify-items: center;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .mop-2:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .programmer-2-space{
+        max-width: 250px;
+        margin-bottom: 10px;
+      }
+
+      .programmer-2{
+        width: 200px;
+      }
+
+      .edem{
+        text-align: justify;
+        padding: 10px;
+      }
+
+      .mop-3{
+        vertical-align: top;
+        max-width: 270px;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        justify-items: center;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .mop-3:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .programmer-3-space{
+        max-width: 250px;
+        margin-bottom: 10px;
+      }
+
+      .programmer-3{
+        width: 200px;
+        height: 200px;
+      }
+
+      .lebene{
+        text-align: justify;
+        padding: 10px;
+      }
+
+      .mop-4{
+        vertical-align: top;
+        max-width: 270px;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        justify-items: center;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .mop-4:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .programmer-4-space{
+        max-width: 250px;
+        margin-bottom: 10px;
+      }
+
+      .programmer-4{
+        width: 200px;
+      }
+
+      .prosper{
+        text-align: justify;
+        padding: 10px;
+      }
+
+      .mop-5{
+        vertical-align: top;
+        max-width: 270px;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        justify-items: center;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .mop-5:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .programmer-5-space{
+        max-width: 250px;
+        margin-bottom: 10px;
+      }
+
+      .programmer-5{
+        width: 200px;
+      }
+
+      .wesley{
+        text-align: justify;
+        padding: 10px;
+      }
+
+      .mop-6{
+        vertical-align: top;
+        max-width: 270px;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        justify-items: center;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .mop-6:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .programmer-6-space{
+        max-width: 250px;
+        margin-bottom: 10px;
+      }
+
+      .programmer-6{
+        width: 200px;
+      }
+
+      .kennedy{
+        text-align: justify;
+        padding: 10px;
+      }
+
+      .mop-7{
+        vertical-align: top;
+        max-width: 270px;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        justify-items: center;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .mop-7:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .programmer-7-space{
+        max-width: 250px;
+        margin-bottom: 10px;
+      }
+
+      .programmer-7{
+        width: 200px;
+      }
+
+      .darko{
+        text-align: justify;
+        padding: 10px;
+      }
+
+      .mop-8{
+        vertical-align: top;
+        max-width: 270px;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        justify-items: center;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .mop-8:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .programmer-8-space{
+        max-width: 250px;
+        margin-bottom: 10px;
+      }
+
+      .programmer-8{
+        width: 200px;
+      }
+
+      .lawrence{
+        text-align: justify;
+        padding: 10px;
+      }
+
+      .mop-9{
+        vertical-align: top;
+        max-width: 270px;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        justify-items: center;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .mop-9:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .programmer-9-space{
+        max-width: 250px;
+        margin-bottom: 10px;
+      }
+
+      .programmer-9{
+        width: 200px;
+      }
+
+      .yekunya{
+        text-align: justify;
+        padding: 10px;
+      }
+
+      .mop-10{
+        vertical-align: top;
+        max-width: 270px;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        justify-items: center;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .mop-10:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .programmer-10-space{
+        max-width: 250px;
+        margin-bottom: 10px;
+      }
+
+      .programmer-10{
+        width: 200px;
+      }
+
+      .aikins{
+        text-align: justify;
+        padding: 10px;
+      }
+
+      .mop-11{
+        vertical-align: top;
+        max-width: 270px;background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        justify-items: center;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .mop-11:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .programmer-11-space{
+        max-width: 250px;
+        margin-bottom: 10px;
+      }
+
+      .programmer-11{
+        width: 200px;
+      }
+
+      .mawudem{
+        text-align: justify;
+        padding: 10px;
+      }
+
+      .mop-12{
+        vertical-align: top;
+        max-width: 270px;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        justify-items: center;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .mop-12:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .programmer-12-space{
+        max-width: 250px;
+        margin-bottom: 10px;
+      }
+
+      .programmer-12{
+        width: 200px;
+      }
+
+      .nunya{
+        text-align: justify;
+        padding: 10px;
+      }
+
+      .mop-13{
+        vertical-align: top;
+        max-width: 270px;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        justify-items: center;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .mop-13:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .programmer-13-space{
+        max-width: 250px;
+        margin-bottom: 10px;
+      }
+
+      .programmer-13{
+        width: 200px;
+      }
+
+      .ilupeju{
+        text-align: justify;
+        padding: 10px;
+      }
+
+      .mop-14{
+        vertical-align: top;
+        max-width: 270px;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        justify-items: center;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .mop-14:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .programmer-14-space{
+        max-width: 250px;
+        margin-bottom: 10px;
+      }
+
+      .programmer-14{
+        width: 200px;
+      }
+
+      .kanbros{
+        text-align: justify;
+        padding: 10px;
+      }
+
+      .mop-15{
+        vertical-align: top;
+        max-width: 270px;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        justify-items: center;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .mop-15:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .programmer-15-space{
+        max-width: 250px;
+        margin-bottom: 10px;
+      }
+
+      .programmer-15{
+        width: 200px;
+      }
+
+      .majid{
+        text-align: justify;
+        padding: 10px;
+      }
+
+      .mop-16{
+        vertical-align: top;
+        max-width: 270px;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        justify-items: center;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .mop-16:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .programmer-16-space{
+        max-width: 250px;
+        margin-bottom: 10px;
+      }
+
+      .programmer-16{
+        width: 200px;
+      }
+
+      .enoch{
+        text-align: justify;
+        padding: 10px;
+      }
+
+      .mop-17{
+        vertical-align: top;
+        max-width: 270px;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        justify-items: center;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .mop-17:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .programmer-17-space{
+        max-width: 250px;
+        margin-bottom: 10px;
+      }
+
+      .programmer-17{
+        width: 200px;
+      }
+
+      .mintah{
+        text-align: justify;
+        padding: 10px;
+      }
+
+      .mop-18{
+        vertical-align: top;
+        max-width: 270px;
+        background-color: rgba(26, 25, 25, 0.529);; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        color: white;
+        justify-items: center;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .mop-18:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .programmer-18-space{
+        max-width: 250px;
+        margin-bottom: 10px;
+      }
+
+      .programmer-18{
+        width: 200px;
+      }
+
+      .aj{
+        text-align: justify;
+        padding: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="sticky">
+      <div class="header">
+       <div class="lower-header"> 
+          <div style="
+          display: inline-block;
+          cursor: pointer;
+          margin-right: 20px;">
+            <h1 style="
+              font-family: 'Didot', serif;  
+              color: orangered; 
+              font-size: 40px; 
+              margin: 0;">StefonTech
+            </h1>  
+          </div>
+
+          <div class="home">
+            <a href="#home-section" class="id-home" onclick="color(grey)"><b>HOME</b></a>
+          </div>
+
+          <div class="about">
+            <a href="#about-section" class="id-about" onclick="color(grey)"><b>ABOUT US</b></a>
+          </div>
+  
+          <div class="services">
+            <a href="#services-section" class="id-services"><b>SERVICES</b></a>
+          </div>
+
+          <div class="programmers">
+            <a href="#programmers-section" class="id-programmers"><b>PROGRAMMERS</b></a>
+          </div>
+  
+          <div class="cu">
+            <b>Contact Us </b>
+          </div>
+          
+          <div class="right-end">
+            <div class="li">
+              Log in
+            </div>
+    
+            <div class="ca">
+              Create account
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <section id="home-section">
+      <div class="intro-space">
+        <div class="intro">
+          <div class="waving-images">
+            <div class="waving-image-1-space">
+              <img src="istockphoto-1326420925-612x612.jpg" class="waving-image-1" alt="waving-image-1">
+            </div>
+
+            <div class="waving-image-2-space">
+              <img src="images.jpg" class="waving-image-2" alt="waving-image-2">
+            </div>
+          </div>
+
+          <div class="intro-text">
+            <p class="welcome">
+              <b>WELCOME TO <span class="ST">StefonTech</span></b>
+            </p>
+
+            <p class="welcome-backup">
+              Your Trusted IT Service Provider
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="outstanding">
+      <section id="about-section">
+        <div class="about-big-body">
+          <div class="about-stefon">
+            <p class="about-question">
+              <b><span class="ST">StefonTech</span> overview</b>
+            </p>
+
+            <div class="about-body">
+              <div class="wdwd">
+                <h2 class="wdwd-question">
+                  <b>What Do <span class="ST">We</span> Do?
+                  </h2>
+
+                <p class="wdwd-answer">
+                  <span class="ST">StefonTech</span> is full-spectrum tech corporation dedicated to building the 
+                  digital infrastructure of the future. From advanced AI systems and cloud computing to smart
+                  devices and next-gen automation, we create technologies that power businesses, connect people, 
+                  and redefine possibilities.<br>
+                  Founded on the belief that innovation should be both powerful and 
+                  human-centered, Scion blends cutting-edge research with real-world impact. Our solutions are 
+                  used across industries, from startups to global enterprises, helping them scale smarter, move faster, 
+                  and work more securely.
+                </p>
+              </div>
+
+              <div class="wrw">
+                <h2 class="wrw-question">
+                  <b>Who Are <span class="ST">We</span>?</b>
+                </h2>
+
+                <p class="wrw-answer">
+                  <span class="ST">StefonTech</span> is a Ghanaian based tech corporation formed by some passionate Computer
+                  Sciences and IT students in the tertiary institutions in Ghana to mainly improve on their skills and
+                  also help people to solve their IT problems.
+                </p>
+              </div>
+
+              <div class="om">
+                <h2 class="om-question">
+                  <b><span class="ST">Our</span> Mission</b>
+                </h2>
+
+                <p class="om-answer">
+                  <span class="ST">Our</span> aim is to harness the power of technology to solve real-world problems, 
+                  empower businesses, and create smarter digital experiences. We focus on building scalable software, 
+                  using data to drive meaningful insights, and delivering full-stack solutions that adapt to the future. Innovation, integrity, and impact guide everything we do—as we strive to make technology more accessible, responsible, and transformative for everyone.
+                </p>
+              </div>
+            </div>
+          </div>     
+        </div>
+      </section>
+    
+      <section id="services-section">
+        <div class="wcs">
+          <p class="stefon-service">
+            <span class="ST">StefonTech</span> is here to help you with all IT problems. We are just a call away and all your problems will be
+            solved.
+          </p>
+  
+          <p class="wcs-question">
+            Why Choose &nbsp;<span class="ST">StefonTech</span>?
+          </p>
+  
+          <div class="wcs-answers">
+            <div class="no-1">
+              <h3 class="a-2">
+                1. Expertise
+              </h3>
+  
+              <h3 class="e-1">
+                Our team consists of highly skilled and experienced professionals in various fields of technology, ensuring 
+                high-quality services and solutions.
+  
+              </h3>          
+            </div>
+  
+            <div class="no-2">
+              <h3 class="a-2">
+                2. Innovative Solutions 
+              </h3>
+  
+              <h3 class="e-2">
+                We stay up-to-date with the latest trends and technologies, providing innovative solutions that meet the 
+                evolving needs of our clients.
+  
+              </h3>
+            </div>
+  
+            <div class="no-3">
+              <h3 class="a-3">
+                3. Customized Services
+              </h3>
+    
+              <h3 class="e-3">
+                We offer tailored services to meet the specific needs of each client, ensuring that they receive the best 
+                possible solution for their business.
+              </h3>
+            </div>
+  
+            <div class="no-4">
+              <h3 class="a-4">
+                4. Competitive Pricing 
+              </h3>
+    
+              <h3 class="e-4">
+                Our prices are competitive, and we offer flexible pricing models to accommodate different budgets and 
+                requirements.
+              </h3>          
+            </div>
+  
+            <div class="no-5">
+              <h3 class="a-5">
+                5. Excellent Customer Support
+              </h3>
+    
+              <h3 class="e-5">
+                We provide exceptional customer support, ensuring that our clients receive prompt and effective assistance
+                whenever they need it.
+              </h3>
+            </div>
+  
+            <div class="no-6">
+              <h3 class="a-6">
+                6. Proven Track Record
+              </h3>
+    
+              <h3 class="e-6">
+                We have a proven track record of delivering successful projects and satisfying our clients' needs.
+              </h3>
+            </div>
+  
+            <div class="no-7">
+              <h3 class="a-7">
+                7. State-of-the-Art Insfracture
+              </h3>
+    
+              <h3 class="e-7">
+                We invest in the latest technologies and infrastructure to ensure that our services are efficient, secure,
+                and reliable.
+              </h3>
+            </div>
+  
+            <div class="no-8">
+              <h3 class="a-8">
+                8. Data Security
+              </h3>
+    
+              <h3 class="e-8">
+                We prioritize data security, implementing robust measures to protect our clients' sensitive information.
+              </h3>
+            </div>
+  
+            <div class="no-9">
+              <h3 class="a-9">
+                9. Contiuous Improvement
+              </h3>
+    
+              <h3 class="e-9">
+                We continuously evaluate and improve our services, ensuring that we stay ahead of the curve and deliver the
+                best possible results for our clients.
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="programmers-section">
+        <div class="meet-our-programmers">
+          <div class="mop-header">
+            Meet our programmers
+          </div>
+  
+          <div class="mop-body">
+            <div class="mop-1">
+              <div class="programmer-1-space">
+                <img src="Screenshot (14).png" class="programmer-1">
+              </div>
+    
+              <div class="ali">
+                Ali Patriicia, a front-end developer at the University of Cape Coast, Ghana reading Bachelor of Science in 
+                Computer Science currently in level 200.
+              </div>
+            </div>
+  
+            <div class="mop-2">
+              <div class="programmer-2-space">
+                <img src="screenshot (54).png" class="programmer-2">
+              </div>
+    
+              <div class="edem">
+                Addo Edem, a backend engineer at the University of Cape Coast, Ghana reading Bachelor of Science in Computer
+                sciences currently in level 200.
+              </div>
+            </div>
+  
+            <div class="mop-3">
+              <div class="programmer-3-space">
+                <img src="WhatsApp Image 2024-10-17 at 17.28.21_820bd8fd.jpg" class="programmer-3">
+              </div>
+    
+              <div class="lebene">
+                Annor Regan, a full-stack developer at the University of Cape Coast, Ghana reading Bachelor
+                of Science in Computer sciences currently in level 200.
+              </div>
+            </div>
+  
+            <div class="mop-4">
+              <div class="programmer-4-space">
+                <img src="images coding.jpeg" class="programmer-4">
+              </div>
+    
+              <div class="prosper">
+                Ahornor Prosper, a front-end developer at the University of Cape Coast, Ghana reading Bachelor of Science in Computer
+                sciences. He is currently in level 200.
+              </div>
+            </div>
+  
+            <div class="mop-5">
+              <div class="programmer-5-space">
+                <img src="photo_2025-05-21_02-22-07.jpg" class="programmer-5">
+              </div>
+    
+              <div class="wesley">
+                Jerry Wesley Senior, a network engineer at the University of Cape Coast, Ghana reading Bachelor of Science in
+                Computer Sciences. He is currently in level 200.
+              </div>
+            </div>
+  
+            <div class="mop-6">
+              <div class="programmer-6-space">
+                <img src="WIN_20250424_16_59_08_Pro.jpg" class="programmer-6">
+              </div>
+    
+              <div class="kennedy">
+                Ofriye Kennedy, a front-end developer at the University of Cape Coast, Ghana reading Bachelor of Science in 
+                information Technology. Currently in level 200.
+              </div>
+            </div>
+  
+            <div class="mop-7">
+              <div class="programmer-7-space">
+                <img src="photo_2025-05-17_19-14-15.jpg" class="programmer-7">
+              </div>
+    
+              <div class="darko">
+                Darko Joshua, a full stack developer at the University of Cape Coast, Ghana reading Bachelor of Science in 
+                Information Technology. Currently in level 200.
+              </div>
+            </div>
+  
+            <div class="mop-8">
+              <div class="programmer-8-space">
+                <img src="WIN_20250424_16_59_08_Pro.jpg" class="programmer-8">
+              </div>
+    
+              <div class="lawrence">
+                Lawrence, a front-end developer at the University of Cape Coast, Ghana reading Bachelor of Science in 
+                Information Technology. Currently in level 200.
+              </div>
+            </div>
+  
+            <div class="mop-9">
+              <div class="programmer-9-space">
+                <img src="WIN_20250424_16_59_08_Pro.jpg" class="programmer-9">
+              </div>
+    
+              <div class="yekunya">
+                Yekunya Prince, a front-end developer at the kwame Nkrumah University of Science and Technology, Ghana
+                reading Bachelor of Science in Computer Sciences. Currently in level 300.
+              </div>
+            </div>
+  
+            <div class="mop-10">
+              <div class="programmer-10-space">
+                <img src="WIN_20250424_16_59_08_Pro.jpg" class="programmer-10">
+              </div>
+    
+              <div class="aikins">
+                Lambert Aikins, a telecommunication engineer at the Ghana Communications Technology University, Ghana
+                reading Bachelor of Science in Computer Sciences. Currently in level 300.
+              </div>
+            </div>
+  
+            <div class="mop-11">
+              <div class="programmer-11-space">
+                <img src="WIN_20250424_16_59_08_Pro.jpg" class="programmer-11">
+              </div>
+    
+              <div class="mawudem">
+                Kpeli Theodore Mawudem, a DevOps engineer at the University of Cape Coast, Ghana
+                reading Bachelor of Science in Computer Sciences. Currently in level 200.
+              </div>
+            </div>
+  
+            <div class="mop-12">
+              <div class="programmer-12-space">
+                <img src="WIN_20250424_16_59_08_Pro.jpg" class="programmer-12">
+              </div>
+    
+              <div class="nunya">
+                Adotey Emmanuel Nunya, a front-end developer at the University of Cape Coasty, Ghana
+                reading Bachelor of Science in Computer Sciences. Currently in level 200.
+              </div>
+            </div>
+  
+            <div class="mop-13">
+              <div class="programmer-13-space">
+                <img src="WIN_20250424_16_59_08_Pro.jpg" class="programmer-13">
+              </div>
+    
+              <div class="ilupeju">
+                Dennis Kwaku Ilupeju, a back-end engineer at the University of Cape Coast, Ghana
+                reading Bachelor of Science in Computer Sciences. Currently in level 200.
+              </div>
+            </div>
+  
+            <div class="mop-14">
+              <div class="programmer-14-space">
+                <img src="WIN_20250424_16_59_08_Pro.jpg" class="programmer-14">
+              </div>
+    
+              <div class="kanbros">
+                Kojo Kanbros Antwi, a cyber security engineer at the University of Cape Coast, Ghana
+                reading Bachelor of Science in Computer Sciences. Currently in level 200.
+              </div>
+            </div>
+  
+            <div class="mop-15">
+              <div class="programmer-15-space">
+                <img src="WIN_20250424_16_59_08_Pro.jpg" class="programmer-15">
+              </div>
+    
+              <div class="majid">
+                Abdul Majid, a front-end developer at the University of Cape Coast, Ghana
+                reading Bachelor of Science in Information Technology. Currently in level 200.
+              </div>
+            </div>
+  
+            <div class="mop-16">
+              <div class="programmer-16-spaace">
+                <img src="Screenshot (73).png" class="programmer-16">
+              </div>
+    
+              <div class="enoch">
+                Enoch Okyere, a front-end developer at the University of Cape Coast, Ghana
+                reading Bachelor of Science in Computer Sciences. Currently in level 200.
+              </div>
+            </div>
+  
+            <div class="mop-17">
+              <div class="programmer-17-spaace">
+                <img src="WIN_20250424_16_59_08_Pro.jpg" class="programmer-17">
+              </div>
+    
+              <div class="mintah">
+                Samuel Amoakoah-Mintah, a front-end developer at the University of Cape Coast, Ghana
+                reading Bachelor of Science in Computer Sciences. Currently in level 200.
+              </div>
+            </div>
+  
+            <div class="mop-18">
+              <div class="programmer-18-spaace">
+                <img src="WIN_20250424_16_59_08_Pro.jpg" class="programmer-18">
+              </div>
+    
+              <div class="aj">
+                Joseph Antwi, a data analyst at the University of Cape Coast, Ghana
+                reading Bachelor of Science in Computer Sciences. Currently in level 200.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
